@@ -1,8 +1,20 @@
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuBtn.addEventListener("click", () => {
+// Toggle ketika tombol hamburger ditekan
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // mencegah click bubble ke document
   mobileMenu.classList.toggle("hidden");
+});
+
+// Tutup menu jika klik di luar menu
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = mobileMenu.contains(e.target);
+  const isClickOnButton = menuBtn.contains(e.target);
+
+  if (!isClickInsideMenu && !isClickOnButton) {
+    mobileMenu.classList.add("hidden");
+  }
 });
 
 window.addEventListener("load", () => {
