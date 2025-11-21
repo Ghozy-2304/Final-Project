@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#E1EEBC] min-h-screen font-sans">
+    <!-- NAVBAR -->
+    <div class="flex justify-center sticky top-6 z-50">
+      <nav
+        class="glass flex items-center justify-between rounded-full shadow-lg px-6 py-3 w-[80%] max-w-4xl transition-all duration-300 border border-white/60"
+      >
+        <!-- Logo -->
+        <div
+          class="lg:text-xl md:text-lg text-base font-bold tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl"
+        >
+          Abbad Hijau
+        </div>
+
+        <!-- Menu Desktop -->
+        <ul
+          class="hidden md:flex md:space-x-5 lg:space-x-10 lg:text-base md:text-sm font-medium"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Home</a
+            >
+          </li>
+
+          <li>
+            <a href="" class="">About Us</a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Program</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <!-- Button Follow Us -->
+        <button
+          class="hidden md:flex lg:text-base md:text-sm font-medium tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Follow Us
+        </button>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="black"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- MENU MOBILE (Tetap aman) -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[120px] left-0 w-full flex justify-center z-40"
+    >
+      <ul
+        class="glass rounded-3xl shadow-xl px-8 py-6 w-[85%] max-w-sm text-center space-y-3 text-base font-medium"
+      >
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Beranda</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Tentang</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Layanan</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Kontak</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[120px] left-0 w-full flex justify-center z-40"
+    >
+      <ul
+        class="glass rounded-3xl shadow-xl px-8 py-6 w-[85%] max-w-sm text-center space-y-3 text-base font-medium"
+      >
+        <li>
+          <a href="index.html" class="block hover:text-green-400">Beranda</a>
+        </li>
+        <li>
+          <a href="about-us.html" class="block hover:text-green-400">Tentang</a>
+        </li>
+        <li>
+          <a href="programs.html" class="block hover:text-green-400">Program</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block hover:text-green-400">Kontak</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section
+      class="h-screen bg-cover bg-center flex items-center -mt-[70px]"
+      style="background-image: url('Assets/hero-banner.jpg')"
+    >
+      <div class="text-white max-w-xl ml-12">
+        <h1 class="text-5xl font-bold mb-4">About Abbad Hijau</h1>
+        <p class="text-lg mb-6">
+          Gerakan lingkungan yang fokus pada pelestarian alam dan edukasi
+          masyarakat untuk menciptakan bumi yang lebih hijau.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <!-- LEFT IMAGES IN VERTICAL STACK -->
+        <div class="space-y-6">
+          <!-- IMAGE 1 -->
+          <div class="relative group">
+            <img
+              src="Assets/About.jpg"
+              alt="Nature"
+              class="rounded-3xl shadow-2xl w-full h-[300px] object-cover transform transition duration-700 group-hover:scale-105 group-hover:rotate-2"
+            />
+            <div
+              class="absolute inset-0 rounded-3xl bg-green-400/20 blur-xl group-hover:opacity-40 transition duration-700"
+            ></div>
+
+            <div
+              class="absolute bottom-4 left-4 glass p-3 rounded-xl text-white shadow-xl max-w-[240px]"
+            >
+              “Setiap pohon yang kami tanam memiliki cerita. Dan setiap langkah
+              kecil memiliki dampak besar.”
+            </div>
+          </div>
+
+          <!-- IMAGE 2 (RECOMMENDED: edukasi-anak.jpg) -->
+          <div class="relative group">
+            <img
+              src="Assets/besih-bersih.jpg"
+              alt="Nature"
+              class="rounded-3xl shadow-2xl w-full h-[300px] object-cover transform transition duration-700 group-hover:scale-105 group-hover:-rotate-2"
+            />
+            <div
+              class="absolute inset-0 rounded-3xl bg-green-400/20 blur-xl group-hover:opacity-40 transition duration-700"
+            ></div>
+
+            <div
+              class="absolute bottom-4 left-4 glass p-3 rounded-xl text-white shadow-xl max-w-[240px]"
+            >
+              “Dari Sabang sampai Merauke, kami membawa harapan dan pengetahuan
+              untuk generasi muda.”
+            </div>
+          </div>
+        </div>
+
+        <!-- TEXT AREA / MAIN CONTENT -->
+        <div
+          class="glass p-10 rounded-3xl border border-white/40 shadow-xl backdrop-blur-xl bg-white/40"
+        >
+          <h2 class="text-4xl font-bold text-green-800 mb-5">
+            Tentang <span class="text-green-600">Abbad Hijau</span>
+          </h2>
+
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            <strong>Abbad Hijau</strong> hadir sebagai gerakan yang bukan hanya
+            mengedukasi, tetapi juga merangkul masyarakat untuk merasakan
+            kembali hubungan mendalam antara manusia dan alam. Kami percaya
+            bahwa menjaga lingkungan bukan hanya kewajiban—tetapi sebuah warisan
+            untuk generasi yang akan datang.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Kami telah melangkah dari Sabang hingga Merauke, memasuki
+            sekolah-sekolah, kampung kecil, hingga desa terpencil. Anak-anak,
+            masyarakat, dan para guru menyambut kami dengan harapan yang besar:
+            harapan untuk bumi yang lebih hijau, air yang lebih jernih, dan
+            udara yang lebih bersih.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-8">
+            Bersama masyarakat, kami menanam ribuan pohon, membersihkan sungai
+            yang dulunya penuh sampah, serta menghidupkan kembali desa-desa agar
+            lebih asri. Upaya kecil kami melahirkan perubahan besar—hingga
+            beberapa desa kini menerima apresiasi karena berhasil menerapkan
+            program pelestarian secara konsisten.
+          </p>
+
+          <button
+            class="px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            Lihat Program Kami
+          </button>
+        </div>
+      </div>
+
+      <!-- COUNTER SECTION -->
+      <div
+        class="max-w-6xl mx-auto mt-20 grid md:grid-cols-3 gap-8 text-center"
+      >
+        <div class="glass p-8 rounded-3xl shadow-lg">
+          <h3
+            class="text-5xl font-bold text-green-700 mb-3 counter"
+            data-target="52300"
+          >
+            0
+          </h3>
+          <p class="text-gray-700 font-medium">Pelajar yang telah diedukasi</p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl shadow-lg">
+          <h3
+            class="text-5xl font-bold text-green-700 mb-3 counter"
+            data-target="178"
+          >
+            0
+          </h3>
+          <p class="text-gray-700 font-medium">Desa binaan & dibantu</p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl shadow-lg">
+          <h3
+            class="text-5xl font-bold text-green-700 mb-3 counter"
+            data-target="6400"
+          >
+            0
+          </h3>
+          <p class="text-gray-700 font-medium">Pohon yang berhasil ditanam</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR VALUES -->
+    <section class="py-20 px-6" style="background-color: #e1eebc">
+      <div class="max-w-6xl mx-auto text-center mb-14">
+        <h2 class="text-4xl font-bold text-green-800 mb-4">
+          Mengapa Kami Peduli?
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Perjuangan kami bukan hanya soal menanam pohon atau membersihkan
+          sungai. Ini tentang membangun masa depan yang lebih hijau, menciptakan
+          lingkungan yang sehat, dan memastikan generasi muda tumbuh dengan
+          kesadaran menjaga bumi.
+        </p>
+      </div>
+
+      <!-- 3 VALUE CARDS -->
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div
+          class="bg-white/60 backdrop-blur-xl border border-white/40 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+        >
+          <div class="text-green-700 text-5xl mb-4">🌱</div>
+          <h3 class="text-2xl font-semibold text-green-800 mb-3">
+            Membantu Alam Pulih
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Kami menanam pohon, merawat ruang hijau, dan menjaga ekosistem agar
+            kembali hidup. Setiap pohon membawa harapan baru bagi bumi.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white/60 backdrop-blur-xl border border-white/40 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+        >
+          <div class="text-green-700 text-5xl mb-4">📚</div>
+          <h3 class="text-2xl font-semibold text-green-800 mb-3">
+            Edukasi untuk Generasi
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Kami mengunjungi sekolah-sekolah dan memperkenalkan kesadaran
+            lingkungan kepada anak-anak dari Sabang sampai Merauke.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white/60 backdrop-blur-xl border border-white/40 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+        >
+          <div class="text-green-700 text-5xl mb-4">🤝</div>
+          <h3 class="text-2xl font-semibold text-green-800 mb-3">
+            Bersama Masyarakat
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Dari membersihkan sungai hingga membangun desa hijau, kami bergerak
+            bersama masyarakat demi lingkungan yang lebih bersih dan sehat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#E1EEBC]">
+      <div
+        class="glass mx-auto rounded-3xl p-10 border border-white/40 shadow-2xl backdrop-blur-xl bg-white/30"
+      >
+        <!-- GRID CONTENT -->
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- Brand -->
+          <div>
+            <h3 class="text-2xl font-bold text-green-700 mb-3">Abbad Hijau</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Bersama menjaga kelestarian alam dan menciptakan masa depan yang
+              lebih hijau.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Home</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Program</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Contact</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>Email: info@abbadhijau.org</li>
+              <li>Phone: +62 812 3456 7890</li>
+              <li>Location: Indonesia</li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/facebook.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/instagram.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/twitter.png" class="w-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div
+          class="text-center mt-10 text-gray-700 pt-6 border-t border-white/40"
+        >
+          © 2025 Abbad Hijau. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

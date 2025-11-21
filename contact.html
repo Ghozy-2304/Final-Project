@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Tambahkan efek blur dan transparansi kustom */
+      .glass {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#E1EEBC] min-h-screen font-sans flex flex-col">
+    <!-- NAVBAR (Glassmorphism Floating Rounded - Compact Version) -->
+    <div class="flex justify-center sticky top-6 z-50">
+      <nav
+        class="glass flex items-center justify-between rounded-full shadow-lg px-6 py-3 w-[80%] max-w-4xl transition-all duration-300 border border-white/60"
+      >
+        <!-- Logo -->
+        <div
+          class="lg:text-xl md:text-lg text-base font-bold tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl"
+        >
+          Abbad Hijau
+        </div>
+
+        <!-- Menu Desktop -->
+        <ul
+          class="hidden md:flex md:space-x-5 lg:space-x-10 lg:text-base md:text-sm font-medium"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Home</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="About-Us.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >About Us</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Program</a
+            >
+          </li>
+
+          <li>
+            <a href="#" class="">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Button Follow Us -->
+        <button
+          class="hidden md:flex lg:text-base md:text-sm font-medium tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Follow Us
+        </button>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="black"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- MENU MOBILE (Tetap aman) -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[120px] left-0 w-full flex justify-center z-40"
+    >
+      <ul
+        class="glass rounded-3xl shadow-xl px-8 py-6 w-[85%] max-w-sm text-center space-y-3 text-base font-medium"
+      >
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Beranda</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Tentang</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Layanan</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Kontak</a>
+        </li>
+      </ul>
+    </div>
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-[#5F8B4C] mb-4"
+        >
+          Hubungi Kami
+        </h2>
+        <p class="text-center text-gray-600 mb-12">
+          Punya pertanyaan atau ingin berkolaborasi? Kirim pesanmu sekarang!
+        </p>
+
+        <div
+          class="glass rounded-3xl shadow-xl p-6 md:p-10 border border-white/40"
+        >
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#67AE6E] focus:border-transparent bg-white/70 backdrop-blur-sm"
+                  placeholder="Masukkan nama Anda"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#67AE6E] focus:border-transparent bg-white/70 backdrop-blur-sm"
+                  placeholder="email@contoh.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="subject"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Subjek</label
+              >
+              <input
+                type="text"
+                id="subject"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#67AE6E] focus:border-transparent bg-white/70 backdrop-blur-sm"
+                placeholder="Subjek pesan Anda"
+              />
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Pesan</label
+              >
+              <textarea
+                id="message"
+                rows="5"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#67AE6E] focus:border-transparent bg-white/70 backdrop-blur-sm"
+                placeholder="Tuliskan pesan Anda di sini..."
+              ></textarea>
+            </div>
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="px-8 py-3 bg-[#67AE6E] text-white font-medium rounded-xl hover:bg-[#5F8B4C] transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Kirim Pesan
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Optional: Info Kontak Tambahan -->
+        <div class="mt-12 text-center text-gray-600 space-y-2">
+          <p>📧 Email: info@abbadhijau.org</p>
+          <p>📱 Instagram: @abbadhijau</p>
+          <p>📍 Lokasi: Jakarta, Indonesia</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#E1EEBC]">
+      <div
+        class="glass mx-auto rounded-3xl p-10 border border-white/40 shadow-2xl backdrop-blur-xl bg-white/30"
+      >
+        <!-- GRID CONTENT -->
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- Brand -->
+          <div>
+            <h3 class="text-2xl font-bold text-green-700 mb-3">Abbad Hijau</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Bersama menjaga kelestarian alam dan menciptakan masa depan yang
+              lebih hijau.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Home</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Program</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Contact</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>Email: info@abbadhijau.org</li>
+              <li>Phone: +62 812 3456 7890</li>
+              <li>Location: Indonesia</li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/facebook.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/instagram.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/twitter.png" class="w-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div
+          class="text-center mt-10 text-gray-700 pt-6 border-t border-white/40"
+        >
+          © 2025 Abbad Hijau. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

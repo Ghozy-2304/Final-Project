@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Tambahkan efek blur dan transparansi kustom */
+      .glass {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#E1EEBC] min-h-screen font-sans">
+    <!-- NAVBAR (Glassmorphism Floating Rounded - Compact Version) -->
+    <div class="flex justify-center sticky top-6 z-50">
+      <nav
+        class="glass flex items-center justify-between rounded-full shadow-lg px-6 py-3 w-[80%] max-w-4xl transition-all duration-300 border border-white/60"
+      >
+        <!-- Logo -->
+        <div
+          class="lg:text-xl md:text-lg text-base font-bold tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl"
+        >
+          Abbad Hijau
+        </div>
+
+        <!-- Menu Desktop -->
+        <ul
+          class="hidden md:flex md:space-x-5 lg:space-x-10 lg:text-base md:text-sm font-medium"
+        >
+          <li><a href="#" class="">Home</a></li>
+
+          <li>
+            <a
+              href="About-Us.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >About Us</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Program</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="contact.html"
+              class="text-gray-600 hover:text-[#67AE6E] transition relative inline-block pb-0.5 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F8B4C] after:transition-all after:duration-300 hover:after:w-full"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <!-- Button Follow Us -->
+        <button
+          class="hidden md:flex lg:text-base md:text-sm font-medium tracking-wide drop-shadow bg-white/30 px-4 py-2 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Follow Us
+        </button>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="black"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- MENU MOBILE (Tetap aman) -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[120px] left-0 w-full flex justify-center z-40"
+    >
+      <ul
+        class="glass rounded-3xl shadow-xl px-8 py-6 w-[85%] max-w-sm text-center space-y-3 text-base font-medium"
+      >
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Beranda</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Tentang</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Layanan</a>
+        </li>
+        <li>
+          <a href="#" class="block hover:text-green-400 transition">Kontak</a>
+        </li>
+      </ul>
+    </div>
+
+    <section
+      class="h-screen bg-cover bg-center flex items-center -mt-[70px]"
+      style="background-image: url('Assets/hero-banner.jpg')"
+    >
+      <div class="text-white max-w-xl ml-12">
+        <h1 class="text-5xl font-bold mb-4">Mari Menjaga Alam Bersama-sama</h1>
+        <p class="text-lg mb-6">
+          Setiap langkah kecil yang kita lakukan hari ini akan membawa perubahan
+          besar bagi bumi di masa depan. Mulailah dari hal sederhana mengurangi
+          sampah, menjaga kebersihan, dan merawat alam di sekitar kita. Bersama,
+          kita bisa menciptakan lingkungan yang lebih sehat dan berkelanjutan.
+        </p>
+        <button
+          class="px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-[0_4px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)] border border-white/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.06] animate-[pulse_2.2s_ease-in-out_infinite]"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <!-- IMAGE -->
+        <div class="relative group">
+          <img
+            src="Assets/About.jpg"
+            alt="Nature"
+            class="rounded-3xl shadow-2xl w-full h-[400px] object-cover transform transition duration-700 group-hover:scale-105 group-hover:rotate-1"
+          />
+
+          <!-- Floating glow -->
+          <div
+            class="absolute inset-0 rounded-3xl bg-green-400/20 blur-xl group-hover:opacity-40 transition duration-700"
+          ></div>
+        </div>
+
+        <!-- TEXT CONTENT (Glass Card + Animation) -->
+        <div
+          class="glass p-10 rounded-3xl border border-white/40 shadow-xl backdrop-blur-xl bg-white/40"
+        >
+          <h2 class="text-4xl font-bold text-green-800 mb-5">
+            About <span class="text-green-600">Abbad Hijau</span>
+          </h2>
+
+          <p class="text-gray-700 mb-6">
+            <strong>Abbad Hijau</strong> hadir sebagai gerakan yang berfokus
+            pada pelestarian lingkungan dan kelestarian alam. Kami berkomitmen
+            untuk mengajak masyarakat memahami, menjaga, dan merawat lingkungan
+            sebagai bagian dari keberlanjutan hidup.
+          </p>
+
+          <p class="text-black leading-relaxed mb-8">
+            Melalui edukasi, aksi sosial, serta program penghijauan, Abbad Hijau
+            ingin menjadi penggerak perubahan positif demi masa depan bumi yang
+            lebih sehat, hijau, dan harmonis.
+          </p>
+
+          <!-- CTA Button -->
+          <button
+            class="px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.06]"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROGRAMS SECTION -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center mb-14 fade-up">
+        <h2 class="text-4xl font-bold text-green-800">
+          Our <span class="text-green-600">Programs</span>
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Berbagai program Abbad Hijau yang dibuat untuk mengajak masyarakat
+          ikut menjaga kelestarian alam melalui aksi nyata dan berkelanjutan.
+        </p>
+      </div>
+
+      <!-- PROGRAMS GRID -->
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- CARD 1 -->
+        <div
+          class="group bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-up"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="Assets/nanam-pohon.jpg"
+              class="w-full h-56 object-cover transition duration-700 group-hover:scale-110"
+              alt="Tree Planting"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-green-700 mb-2">
+              Penanaman Pohon
+            </h3>
+            <p class="text-gray-600">
+              Program penghijauan untuk menanam pohon di area kritis demi
+              menciptakan lingkungan lebih sehat.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="group bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-up delay-1"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="Assets/edukasi.jpg"
+              class="w-full h-56 object-cover transition duration-700 group-hover:scale-110"
+              alt="Environmental Education"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-green-700 mb-2">
+              Edukasi Lingkungan
+            </h3>
+            <p class="text-gray-600">
+              Mengedukasi masyarakat tentang pentingnya menjaga ekosistem demi
+              masa depan bumi.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="group bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-up delay-2"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="Assets/bersihin-sungai.jpg"
+              class="w-full h-56 object-cover transition duration-700 group-hover:scale-110"
+              alt="Clean Up Movement"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-green-700 mb-2">
+              Aksi Bersih Lingkungan
+            </h3>
+            <p class="text-gray-600">
+              Gerakan membersihkan sungai, pantai, dan kota untuk menciptakan
+              ruang hidup yang lebih bersih.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#E1EEBC]">
+      <div
+        class="glass mx-auto rounded-3xl p-10 border border-white/40 shadow-2xl backdrop-blur-xl bg-white/30"
+      >
+        <!-- GRID CONTENT -->
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- Brand -->
+          <div>
+            <h3 class="text-2xl font-bold text-green-700 mb-3">Abbad Hijau</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Bersama menjaga kelestarian alam dan menciptakan masa depan yang
+              lebih hijau.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Home</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Program</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-600 transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Contact</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>Email: info@abbadhijau.org</li>
+              <li>Phone: +62 812 3456 7890</li>
+              <li>Location: Indonesia</li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h4 class="font-semibold text-green-800 mb-3">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/facebook.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/instagram.png" class="w-6" />
+              </a>
+              <a
+                href="#"
+                class="p-3 glass rounded-xl hover:-translate-y-1 transition shadow-lg"
+              >
+                <img src="Assets/twitter.png" class="w-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div
+          class="text-center mt-10 text-gray-700 pt-6 border-t border-white/40"
+        >
+          © 2025 Abbad Hijau. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
